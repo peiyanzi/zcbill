@@ -2627,6 +2627,7 @@
                 <option value="采购支出（PVC原料）">采购支出（PVC原料）</option>
                 <option value="采购支出（其他）">采购支出（其他）</option>
                 <option value="到期托收支出">到期托收支出</option>
+                <option value="关联公司背书支出">关联公司背书支出</option>
                 <option value="票据质押支出">票据质押支出</option>
                 <option value="贴现支出">贴现支出</option>
                 <option value="退票支出">退票支出</option>
@@ -2639,48 +2640,46 @@
               <input id="u789_input" type="text" value="日历选择"/>
             </div>
 
-            <!-- Unnamed (下拉列表框) -->
-            <div id="u790" class="ax_default droplist">
-              <select id="u790_input">
-                <option value="所有客户">所有客户</option>
-              </select>
+            <!-- Unnamed (文本框) -->
+            <div id="u790" class="ax_default text_field">
+              <input id="u790_input" type="text" value="仅纸票"/>
             </div>
 
             <!-- Unnamed (文本框) -->
             <div id="u791" class="ax_default text_field">
-              <input id="u791_input" type="text" value="仅纸票"/>
-            </div>
-
-            <!-- Unnamed (文本框) -->
-            <div id="u792" class="ax_default text_field">
-              <input id="u792_input" type="text" value=""/>
+              <input id="u791_input" type="text" value=""/>
             </div>
 
             <!-- Unnamed (矩形) -->
-            <div id="u793" class="ax_default box_1">
-              <img id="u793_img" class="img " src="images/库存应收票据/u793.png"/>
+            <div id="u792" class="ax_default box_1">
+              <img id="u792_img" class="img " src="images/库存应收票据/u792.png"/>
               <!-- Unnamed () -->
-              <div id="u794" class="text">
+              <div id="u793" class="text">
                 <p><span>付票附证明份数：</span></p>
               </div>
             </div>
 
             <!-- Unnamed (图片) -->
-            <div id="u795" class="ax_default _图片">
-              <img id="u795_img" class="img " src="images/库存应收票据/u555.png"/>
+            <div id="u794" class="ax_default _图片">
+              <img id="u794_img" class="img " src="images/库存应收票据/u555.png"/>
               <!-- Unnamed () -->
-              <div id="u796" class="text" style="display:none; visibility: hidden">
+              <div id="u795" class="text" style="display:none; visibility: hidden">
                 <p><span></span></p>
               </div>
             </div>
 
             <!-- Unnamed (矩形) -->
-            <div id="u797" class="ax_default box_1">
-              <img id="u797_img" class="img " src="images/库存应收票据/u797.png"/>
+            <div id="u796" class="ax_default box_1">
+              <img id="u796_img" class="img " src="images/库存应收票据/u796.png"/>
               <!-- Unnamed () -->
-              <div id="u798" class="text">
+              <div id="u797" class="text">
                 <p><span>份</span></p>
               </div>
+            </div>
+
+            <!-- Unnamed (文本框) -->
+            <div id="u798" class="ax_default text_field">
+              <input id="u798_input" type="text" value=""/>
             </div>
 
             <!-- Unnamed (文本框) -->
@@ -2688,17 +2687,76 @@
               <input id="u799_input" type="text" value=""/>
             </div>
 
-            <!-- Unnamed (文本框) -->
-            <div id="u800" class="ax_default text_field">
-              <input id="u800_input" type="text" value=""/>
+            <!-- 事由提示 (矩形) -->
+            <div id="u800" class="ax_default box_1 ax_default_hidden" data-label="事由提示" style="display:none; visibility: hidden">
+              <div id="u800_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u801" class="text">
+                <p><span>请确定票据是直接支付给外部供应商！如是通过集团内部公司采购，付票事由请选择”关联公司背书支出“。</span></p>
+              </div>
             </div>
 
-            <!-- 事由提示 (矩形) -->
-            <div id="u801" class="ax_default box_1 ax_default_hidden" data-label="事由提示" style="display:none; visibility: hidden">
-              <div id="u801_div" class=""></div>
-              <!-- Unnamed () -->
-              <div id="u802" class="text">
-                <p><span>请确定票据是直接支付给外部供应商！如是通过集团内部公司采购，付票事由请选择”关联公司背书支出“。</span></p>
+            <!-- 被背书人 (动态面板) -->
+            <div id="u802" class="ax_default" data-label="被背书人">
+              <div id="u802_state0" class="panel_state" data-label="供应商" style="">
+                <div id="u802_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (下拉列表框) -->
+                  <div id="u803" class="ax_default droplist">
+                    <select id="u803_input">
+                      <option value="供应商1">供应商1</option>
+                      <option value="供应商2 ">供应商2 </option>
+                      <option value="供应商3">供应商3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div id="u802_state1" class="panel_state" data-label="内部公司" style="visibility: hidden;">
+                <div id="u802_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (下拉列表框) -->
+                  <div id="u804" class="ax_default droplist">
+                    <select id="u804_input">
+                      <option value="新昌基地">新昌基地</option>
+                      <option value="下沙基地">下沙基地</option>
+                      <option value="内部公司3">内部公司3</option>
+                      <option value="内部公司4">内部公司4</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div id="u802_state2" class="panel_state" data-label="银行" style="visibility: hidden;">
+                <div id="u802_state2_content" class="panel_state_content">
+
+                  <!-- Unnamed (下拉列表框) -->
+                  <div id="u805" class="ax_default droplist">
+                    <select id="u805_input">
+                      <option value="浙江建设银行宝石支行">浙江建设银行宝石支行</option>
+                      <option value="浙江工商银行">浙江工商银行</option>
+                      <option value="银行信息库中的银行列表">银行信息库中的银行列表</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div id="u802_state3" class="panel_state" data-label="其他" style="visibility: hidden;">
+                <div id="u802_state3_content" class="panel_state_content">
+
+                  <!-- Unnamed (文本框) -->
+                  <div id="u806" class="ax_default text_field">
+                    <input id="u806_input" type="text" value=""/>
+                  </div>
+                </div>
+              </div>
+              <div id="u802_state4" class="panel_state" data-label="内部公司、客户" style="visibility: hidden;">
+                <div id="u802_state4_content" class="panel_state_content">
+
+                  <!-- Unnamed (下拉列表框) -->
+                  <div id="u807" class="ax_default droplist">
+                    <select id="u807_input">
+                      <option value="所有内部公司+客户列表">所有内部公司+客户列表</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -2707,137 +2765,137 @@
           <div id="u537_state5_content" class="panel_state_content">
 
             <!-- Unnamed (矩形) -->
-            <div id="u803" class="ax_default box_1">
-              <div id="u803_div" class=""></div>
+            <div id="u808" class="ax_default box_1">
+              <div id="u808_div" class=""></div>
               <!-- Unnamed () -->
-              <div id="u804" class="text" style="display:none; visibility: hidden">
+              <div id="u809" class="text" style="display:none; visibility: hidden">
                 <p><span></span></p>
               </div>
             </div>
 
             <!-- Unnamed (矩形) -->
-            <div id="u805" class="ax_default box_1">
-              <img id="u805_img" class="img " src="images/库存应收票据/u654.png"/>
+            <div id="u810" class="ax_default box_1">
+              <img id="u810_img" class="img " src="images/库存应收票据/u654.png"/>
               <!-- Unnamed () -->
-              <div id="u806" class="text">
+              <div id="u811" class="text">
                 <p><span>网银操作表</span></p>
               </div>
             </div>
 
             <!-- Unnamed (水平线) -->
-            <div id="u807" class="ax_default line">
-              <img id="u807_img" class="img " src="images/库存应收票据/u807.png"/>
+            <div id="u812" class="ax_default line">
+              <img id="u812_img" class="img " src="images/库存应收票据/u812.png"/>
               <!-- Unnamed () -->
-              <div id="u808" class="text" style="display:none; visibility: hidden">
+              <div id="u813" class="text" style="display:none; visibility: hidden">
                 <p><span></span></p>
               </div>
             </div>
 
             <!-- Unnamed (矩形) -->
-            <div id="u809" class="ax_default button">
-              <div id="u809_div" class=""></div>
+            <div id="u814" class="ax_default button">
+              <div id="u814_div" class=""></div>
               <!-- Unnamed () -->
-              <div id="u810" class="text">
+              <div id="u815" class="text">
                 <p><span>取消</span></p>
               </div>
             </div>
 
             <!-- Unnamed (矩形) -->
-            <div id="u811" class="ax_default primary_button">
-              <div id="u811_div" class=""></div>
+            <div id="u816" class="ax_default primary_button">
+              <div id="u816_div" class=""></div>
               <!-- Unnamed () -->
-              <div id="u812" class="text">
+              <div id="u817" class="text">
                 <p><span>确定</span></p>
               </div>
             </div>
 
             <!-- Unnamed (单选按钮) -->
-            <div id="u813" class="ax_default radio_button">
-              <label for="u813_input">
+            <div id="u818" class="ax_default radio_button">
+              <label for="u818_input">
                 <!-- Unnamed () -->
-                <div id="u814" class="text">
+                <div id="u819" class="text">
                   <p><span>背书支付</span></p>
                 </div>
               </label>
-              <input id="u813_input" type="radio" value="radio" name="u813"/>
+              <input id="u818_input" type="radio" value="radio" name="u818"/>
             </div>
 
             <!-- Unnamed (单选按钮) -->
-            <div id="u815" class="ax_default radio_button">
-              <label for="u815_input">
+            <div id="u820" class="ax_default radio_button">
+              <label for="u820_input">
                 <!-- Unnamed () -->
-                <div id="u816" class="text">
+                <div id="u821" class="text">
                   <p><span>贴现支付</span></p>
                 </div>
               </label>
-              <input id="u815_input" type="radio" value="radio" name="u815"/>
+              <input id="u820_input" type="radio" value="radio" name="u820"/>
             </div>
 
             <!-- Unnamed (单选按钮) -->
-            <div id="u817" class="ax_default radio_button">
-              <label for="u817_input">
+            <div id="u822" class="ax_default radio_button">
+              <label for="u822_input">
                 <!-- Unnamed () -->
-                <div id="u818" class="text">
+                <div id="u823" class="text">
                   <p><span>质押托管支付</span></p>
                 </div>
               </label>
-              <input id="u817_input" type="radio" value="radio" name="u817"/>
+              <input id="u822_input" type="radio" value="radio" name="u822"/>
             </div>
 
             <!-- Unnamed (单选按钮) -->
-            <div id="u819" class="ax_default radio_button">
-              <label for="u819_input">
+            <div id="u824" class="ax_default radio_button">
+              <label for="u824_input">
                 <!-- Unnamed () -->
-                <div id="u820" class="text">
+                <div id="u825" class="text">
                   <p><span>到期托收</span></p>
                 </div>
               </label>
-              <input id="u819_input" type="radio" value="radio" name="u819"/>
+              <input id="u824_input" type="radio" value="radio" name="u824"/>
             </div>
 
             <!-- Unnamed (单选按钮) -->
-            <div id="u821" class="ax_default radio_button">
-              <label for="u821_input">
+            <div id="u826" class="ax_default radio_button">
+              <label for="u826_input">
                 <!-- Unnamed () -->
-                <div id="u822" class="text">
+                <div id="u827" class="text">
                   <p><span>转移银行</span></p>
                 </div>
               </label>
-              <input id="u821_input" type="radio" value="radio" name="u821"/>
+              <input id="u826_input" type="radio" value="radio" name="u826"/>
             </div>
 
             <!-- 说明 (矩形) -->
-            <div id="u823" class="ax_default box_1 ax_default_hidden" data-label="说明" style="display:none; visibility: hidden">
-              <img id="u823_img" class="img " src="images/库存应收票据/说明_u823.png"/>
+            <div id="u828" class="ax_default box_1 ax_default_hidden" data-label="说明" style="display:none; visibility: hidden">
+              <img id="u828_img" class="img " src="images/库存应收票据/说明_u828.png"/>
               <!-- Unnamed () -->
-              <div id="u824" class="text">
+              <div id="u829" class="text">
                 <p><span>收票银行相同的电票可以生成贴现明细表</span></p>
               </div>
             </div>
 
             <!-- Unnamed (图片) -->
-            <div id="u825" class="ax_default _图片">
-              <img id="u825_img" class="img " src="images/库存应收票据/u825.png"/>
+            <div id="u830" class="ax_default _图片">
+              <img id="u830_img" class="img " src="images/库存应收票据/u830.png"/>
               <!-- Unnamed () -->
-              <div id="u826" class="text" style="display:none; visibility: hidden">
+              <div id="u831" class="text" style="display:none; visibility: hidden">
                 <p><span></span></p>
               </div>
             </div>
 
             <!-- 说明1 (矩形) -->
-            <div id="u827" class="ax_default box_1 ax_default_hidden" data-label="说明1" style="display:none; visibility: hidden">
-              <img id="u827_img" class="img " src="images/库存应收票据/说明1_u827.png"/>
+            <div id="u832" class="ax_default box_1 ax_default_hidden" data-label="说明1" style="display:none; visibility: hidden">
+              <img id="u832_img" class="img " src="images/库存应收票据/说明1_u832.png"/>
               <!-- Unnamed () -->
-              <div id="u828" class="text">
+              <div id="u833" class="text">
                 <p><span>收票银行相同的电票可以生成质押托管明细表</span></p>
               </div>
             </div>
 
             <!-- Unnamed (图片) -->
-            <div id="u829" class="ax_default _图片">
-              <img id="u829_img" class="img " src="images/库存应收票据/u825.png"/>
+            <div id="u834" class="ax_default _图片">
+              <img id="u834_img" class="img " src="images/库存应收票据/u830.png"/>
               <!-- Unnamed () -->
-              <div id="u830" class="text" style="display:none; visibility: hidden">
+              <div id="u835" class="text" style="display:none; visibility: hidden">
                 <p><span></span></p>
               </div>
             </div>
@@ -2847,73 +2905,73 @@
           <div id="u537_state6_content" class="panel_state_content">
 
             <!-- Unnamed (矩形) -->
-            <div id="u831" class="ax_default box_1">
-              <div id="u831_div" class=""></div>
+            <div id="u836" class="ax_default box_1">
+              <div id="u836_div" class=""></div>
               <!-- Unnamed () -->
-              <div id="u832" class="text" style="display:none; visibility: hidden">
+              <div id="u837" class="text" style="display:none; visibility: hidden">
                 <p><span></span></p>
               </div>
             </div>
 
             <!-- Unnamed (矩形) -->
-            <div id="u833" class="ax_default box_1">
-              <img id="u833_img" class="img " src="images/库存应收票据/u540.png"/>
+            <div id="u838" class="ax_default box_1">
+              <img id="u838_img" class="img " src="images/库存应收票据/u540.png"/>
               <!-- Unnamed () -->
-              <div id="u834" class="text">
+              <div id="u839" class="text">
                 <p><span>选择文件：</span></p>
               </div>
             </div>
 
             <!-- Unnamed (矩形) -->
-            <div id="u835" class="ax_default box_1">
-              <img id="u835_img" class="img " src="images/库存应收票据/u654.png"/>
+            <div id="u840" class="ax_default box_1">
+              <img id="u840_img" class="img " src="images/库存应收票据/u654.png"/>
               <!-- Unnamed () -->
-              <div id="u836" class="text">
+              <div id="u841" class="text">
                 <p><span>应收票据批量上传</span></p>
               </div>
             </div>
 
             <!-- Unnamed (水平线) -->
-            <div id="u837" class="ax_default line">
-              <img id="u837_img" class="img " src="images/库存应收票据/u837.png"/>
+            <div id="u842" class="ax_default line">
+              <img id="u842_img" class="img " src="images/库存应收票据/u842.png"/>
               <!-- Unnamed () -->
-              <div id="u838" class="text" style="display:none; visibility: hidden">
+              <div id="u843" class="text" style="display:none; visibility: hidden">
                 <p><span></span></p>
               </div>
             </div>
 
             <!-- Unnamed (矩形) -->
-            <div id="u839" class="ax_default button">
-              <div id="u839_div" class=""></div>
+            <div id="u844" class="ax_default button">
+              <div id="u844_div" class=""></div>
               <!-- Unnamed () -->
-              <div id="u840" class="text">
+              <div id="u845" class="text">
                 <p><span>取消</span></p>
               </div>
             </div>
 
             <!-- Unnamed (矩形) -->
-            <div id="u841" class="ax_default primary_button">
-              <div id="u841_div" class=""></div>
+            <div id="u846" class="ax_default primary_button">
+              <div id="u846_div" class=""></div>
               <!-- Unnamed () -->
-              <div id="u842" class="text">
+              <div id="u847" class="text">
                 <p><span>确定</span></p>
               </div>
             </div>
 
             <!-- Unnamed (矩形) -->
-            <div id="u843" class="ax_default box_1">
-              <div id="u843_div" class=""></div>
+            <div id="u848" class="ax_default box_1">
+              <div id="u848_div" class=""></div>
               <!-- Unnamed () -->
-              <div id="u844" class="text" style="display:none; visibility: hidden">
+              <div id="u849" class="text" style="display:none; visibility: hidden">
                 <p><span></span></p>
               </div>
             </div>
 
             <!-- Unnamed (矩形) -->
-            <div id="u845" class="ax_default box_1">
-              <img id="u845_img" class="img " src="images/库存应收票据/u845.png"/>
+            <div id="u850" class="ax_default box_1">
+              <img id="u850_img" class="img " src="images/库存应收票据/u850.png"/>
               <!-- Unnamed () -->
-              <div id="u846" class="text">
+              <div id="u851" class="text">
                 <p><span style="text-decoration:underline;">下载模板</span></p>
               </div>
             </div>
@@ -2922,122 +2980,122 @@
       </div>
 
       <!-- Unnamed (矩形) -->
-      <div id="u847" class="ax_default box_1">
-        <img id="u847_img" class="img " src="images/库存应收票据/u847.png"/>
+      <div id="u852" class="ax_default box_1">
+        <img id="u852_img" class="img " src="images/库存应收票据/u852.png"/>
         <!-- Unnamed () -->
-        <div id="u848" class="text" style="display:none; visibility: hidden">
+        <div id="u853" class="text" style="display:none; visibility: hidden">
           <p><span></span></p>
         </div>
       </div>
 
       <!-- Unnamed (矩形) -->
-      <div id="u849" class="ax_default box_2">
-        <div id="u849_div" class=""></div>
+      <div id="u854" class="ax_default box_2">
+        <div id="u854_div" class=""></div>
         <!-- Unnamed () -->
-        <div id="u850" class="text">
+        <div id="u855" class="text">
           <p><span>手工新增</span></p>
         </div>
       </div>
 
       <!-- Unnamed (矩形) -->
-      <div id="u851" class="ax_default button">
-        <div id="u851_div" class=""></div>
+      <div id="u856" class="ax_default button">
+        <div id="u856_div" class=""></div>
         <!-- Unnamed () -->
-        <div id="u852" class="text">
+        <div id="u857" class="text">
           <p><span>删除</span></p>
         </div>
       </div>
 
       <!-- Unnamed (矩形) -->
-      <div id="u853" class="ax_default box_1">
-        <img id="u853_img" class="img " src="images/库存应收票据/u853.png"/>
+      <div id="u858" class="ax_default box_1">
+        <img id="u858_img" class="img " src="images/库存应收票据/u858.png"/>
         <!-- Unnamed () -->
-        <div id="u854" class="text" style="display:none; visibility: hidden">
+        <div id="u859" class="text" style="display:none; visibility: hidden">
           <p><span></span></p>
         </div>
       </div>
 
       <!-- Unnamed (矩形) -->
-      <div id="u855" class="ax_default box_1">
-        <img id="u855_img" class="img " src="images/库存应收票据/u853.png"/>
+      <div id="u860" class="ax_default box_1">
+        <img id="u860_img" class="img " src="images/库存应收票据/u858.png"/>
         <!-- Unnamed () -->
-        <div id="u856" class="text" style="display:none; visibility: hidden">
+        <div id="u861" class="text" style="display:none; visibility: hidden">
           <p><span></span></p>
         </div>
       </div>
 
       <!-- Unnamed (矩形) -->
-      <div id="u857" class="ax_default box_1">
-        <img id="u857_img" class="img " src="images/库存应收票据/u857.png"/>
+      <div id="u862" class="ax_default box_1">
+        <img id="u862_img" class="img " src="images/库存应收票据/u862.png"/>
         <!-- Unnamed () -->
-        <div id="u858" class="text" style="display:none; visibility: hidden">
+        <div id="u863" class="text" style="display:none; visibility: hidden">
           <p><span></span></p>
         </div>
       </div>
 
       <!-- Unnamed (矩形) -->
-      <div id="u859" class="ax_default button">
-        <div id="u859_div" class=""></div>
+      <div id="u864" class="ax_default button">
+        <div id="u864_div" class=""></div>
         <!-- Unnamed () -->
-        <div id="u860" class="text">
+        <div id="u865" class="text">
           <p><span>修改</span></p>
         </div>
       </div>
 
       <!-- Unnamed (矩形) -->
-      <div id="u861" class="ax_default box_1">
-        <div id="u861_div" class=""></div>
+      <div id="u866" class="ax_default box_1">
+        <div id="u866_div" class=""></div>
         <!-- Unnamed () -->
-        <div id="u862" class="text">
+        <div id="u867" class="text">
           <p><span>只有“手工新增”的票据可以做删除。”修改“只能修改自己添加的信息。</span></p>
         </div>
       </div>
 
       <!-- Unnamed (矩形) -->
-      <div id="u863" class="ax_default box_1">
-        <div id="u863_div" class=""></div>
+      <div id="u868" class="ax_default box_1">
+        <div id="u868_div" class=""></div>
         <!-- Unnamed () -->
-        <div id="u864" class="text">
+        <div id="u869" class="text">
           <p><span>“签收新增”的票据不可以做删除。”修改“只能修改自己添加的信息，内部流转过来的，信息有误时只能退回修改</span></p>
         </div>
       </div>
 
       <!-- Unnamed (连接线) -->
-      <div id="u865" class="ax_default _连接线">
-        <img id="u865_seg0" class="img " src="images/库存应收票据/u865_seg0.png" alt="u865_seg0"/>
-        <img id="u865_seg1" class="img " src="images/库存应收票据/u865_seg1.png" alt="u865_seg1"/>
-        <img id="u865_seg2" class="img " src="images/库存应收票据/u865_seg2.png" alt="u865_seg2"/>
-        <img id="u865_seg3" class="img " src="images/库存应收票据/u865_seg3.png" alt="u865_seg3"/>
-        <img id="u865_seg4" class="img " src="images/库存应收票据/u865_seg4.png" alt="u865_seg4"/>
-        <img id="u865_seg5" class="img " src="images/库存应收票据/u865_seg5.png" alt="u865_seg5"/>
+      <div id="u870" class="ax_default _连接线">
+        <img id="u870_seg0" class="img " src="images/库存应收票据/u870_seg0.png" alt="u870_seg0"/>
+        <img id="u870_seg1" class="img " src="images/库存应收票据/u870_seg1.png" alt="u870_seg1"/>
+        <img id="u870_seg2" class="img " src="images/库存应收票据/u870_seg2.png" alt="u870_seg2"/>
+        <img id="u870_seg3" class="img " src="images/库存应收票据/u870_seg3.png" alt="u870_seg3"/>
+        <img id="u870_seg4" class="img " src="images/库存应收票据/u870_seg4.png" alt="u870_seg4"/>
+        <img id="u870_seg5" class="img " src="images/库存应收票据/u870_seg5.png" alt="u870_seg5"/>
         <!-- Unnamed () -->
-        <div id="u866" class="text" style="display:none; visibility: hidden">
+        <div id="u871" class="text" style="display:none; visibility: hidden">
           <p><span></span></p>
         </div>
       </div>
 
       <!-- Unnamed (连接线) -->
-      <div id="u867" class="ax_default _连接线">
-        <img id="u867_seg0" class="img " src="images/库存应收票据/u867_seg0.png" alt="u867_seg0"/>
-        <img id="u867_seg1" class="img " src="images/库存应收票据/u865_seg5.png" alt="u867_seg1"/>
+      <div id="u872" class="ax_default _连接线">
+        <img id="u872_seg0" class="img " src="images/库存应收票据/u872_seg0.png" alt="u872_seg0"/>
+        <img id="u872_seg1" class="img " src="images/库存应收票据/u870_seg5.png" alt="u872_seg1"/>
         <!-- Unnamed () -->
-        <div id="u868" class="text" style="display:none; visibility: hidden">
+        <div id="u873" class="text" style="display:none; visibility: hidden">
           <p><span></span></p>
         </div>
       </div>
 
       <!-- Unnamed (矩形) -->
-      <div id="u869" class="ax_default box_1">
-        <img id="u869_img" class="img " src="images/库存应收票据/u869.png"/>
+      <div id="u874" class="ax_default box_1">
+        <img id="u874_img" class="img " src="images/库存应收票据/u874.png"/>
         <!-- Unnamed () -->
-        <div id="u870" class="text" style="display:none; visibility: hidden">
+        <div id="u875" class="text" style="display:none; visibility: hidden">
           <p><span></span></p>
         </div>
       </div>
 
       <!-- Unnamed (下拉列表框) -->
-      <div id="u871" class="ax_default droplist">
-        <select id="u871_input">
+      <div id="u876" class="ax_default droplist">
+        <select id="u876_input">
           <option value="经营性回笼收入">经营性回笼收入</option>
           <option value="广角回笼收入">广角回笼收入</option>
           <option value="关联公司背书收入">关联公司背书收入</option>
