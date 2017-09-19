@@ -100,5 +100,14 @@
   text-align:center;
   line-height:normal;
 }
+.sticky_2 {
+  text-align:left;
+}
+.sticky_3 {
+  text-align:left;
+}
+.marker {
+  color:#FFFFFF;
+}
 .flow_shape {
 }
