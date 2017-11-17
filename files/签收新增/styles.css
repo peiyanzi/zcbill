@@ -4036,6 +4036,7 @@
   font-family:'Arial Negreta', 'Arial Normal', 'Arial';
   font-weight:700;
   font-style:normal;
+  color:#CCCCCC;
 }
 #u1751 {
   border-width:0px;
@@ -4406,7 +4407,7 @@
 #u1776 {
   border-width:0px;
   position:absolute;
-  left:540px;
+  left:556px;
   top:386px;
   width:820px;
   height:800px;
