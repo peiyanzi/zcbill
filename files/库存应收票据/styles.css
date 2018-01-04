@@ -3,7 +3,7 @@
   background-image:none;
   position:static;
   left:auto;
-  width:1659px;
+  width:1640px;
   margin-left:0;
   margin-right:0;
   text-align:left;
@@ -4947,8 +4947,8 @@
 #u667 {
   border-width:0px;
   position:absolute;
-  left:1410px;
-  top:531px;
+  left:1353px;
+  top:542px;
   width:179px;
   height:69px;
   text-align:left;
@@ -4978,22 +4978,24 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
+  color:#FF0000;
   text-align:left;
 }
 #u669 {
   border-width:0px;
   position:absolute;
-  left:1420px;
+  left:1388px;
   top:416px;
   width:239px;
   height:84px;
+  color:#FF0000;
   text-align:left;
 }
 #u670 {
   border-width:0px;
   position:absolute;
   left:2px;
-  top:18px;
+  top:10px;
   width:235px;
   word-wrap:break-word;
 }
@@ -5010,45 +5012,13 @@
   position:absolute;
   left:0px;
   top:-4px;
-  width:28px;
+  width:56px;
   height:8px;
 }
 #u671_seg1 {
   border-width:0px;
   position:absolute;
-  left:20px;
-  top:-12px;
-  width:8px;
-  height:16px;
-}
-#u671_seg2 {
-  border-width:0px;
-  position:absolute;
-  left:20px;
-  top:-12px;
-  width:58px;
-  height:8px;
-}
-#u671_seg3 {
-  border-width:0px;
-  position:absolute;
-  left:70px;
-  top:-12px;
-  width:8px;
-  height:16px;
-}
-#u671_seg4 {
-  border-width:0px;
-  position:absolute;
-  left:70px;
-  top:-4px;
-  width:14px;
-  height:8px;
-}
-#u671_seg5 {
-  border-width:0px;
-  position:absolute;
-  left:71px;
+  left:39px;
   top:-10px;
   width:20px;
   height:20px;
@@ -5056,8 +5026,8 @@
 #u672 {
   border-width:0px;
   position:absolute;
-  left:-8px;
-  top:-16px;
+  left:-24px;
+  top:-8px;
   width:100px;
   visibility:hidden;
   word-wrap:break-word;
@@ -5076,29 +5046,29 @@
   left:-4px;
   top:0px;
   width:8px;
-  height:13px;
+  height:24px;
 }
 #u673_seg1 {
   border-width:0px;
   position:absolute;
   left:-4px;
-  top:5px;
-  width:160px;
+  top:16px;
+  width:103px;
   height:8px;
 }
 #u673_seg2 {
   border-width:0px;
   position:absolute;
-  left:143px;
-  top:-1px;
+  left:86px;
+  top:10px;
   width:20px;
   height:20px;
 }
 #u674 {
   border-width:0px;
   position:absolute;
-  left:24px;
-  top:1px;
+  left:-10px;
+  top:12px;
   width:100px;
   visibility:hidden;
   word-wrap:break-word;
@@ -5218,8 +5188,8 @@
 #u682 {
   border-width:0px;
   position:absolute;
-  left:410px;
-  top:460px;
+  left:360px;
+  top:443px;
   width:945px;
   height:810px;
   overflow:hidden;
